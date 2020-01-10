@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/blank.jpg fill
+set $bgpath ~/Pictures/bg/blank.jpg 
+
+output * bg $bgpath fill
 
 font pango: Lato Light 16
 
@@ -34,8 +36,8 @@ set $statuscolor #ffffff80
 #
 
 default_border normal 0
-gaps outer 0
-gaps inner 48
+gaps outer 0 
+gaps inner 24
 
 
 client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
@@ -50,6 +52,7 @@ client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicato
 bar {
     position top
     font pango: Lato Light 16
+    status_command i3status
     colors {
         focused_statusline $statuscolor
         statusline $statuscolor

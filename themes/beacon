@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/beacon.jpg fill
+set $bgpath ~/Pictures/bg/beacon.jpg 
+
+output * bg $bgpath fill
 
 font pango: Lato Light 16
 

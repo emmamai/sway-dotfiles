@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/blank.jpg fill
+set $bgpath ~/Pictures/bg/blank.jpg
+
+output * bg $bgpath fill
 
 font pango: Lato Light 11
 
@@ -35,9 +37,6 @@ set $statusbg #414339ff
 #
 # Appearance:
 #
-
-set $gaps_outer_on 0
-set $gaps_inner_on 48
 
 default_border normal 0
 gaps outer 0

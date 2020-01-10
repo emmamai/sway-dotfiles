@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/1980.jpg fill
+set $bgpath ~/Pictures/bg/1980.jpg 
+
+output * bg $bgpath fill
 
 set $font Radis Sans 13
 

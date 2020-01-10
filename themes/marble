@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/marble.jpg fill
+set $bgpath ~/Pictures/bg/marble.jpg
+
+output * bg $bgpath fill
 
 font pango: Lato Light 16
 

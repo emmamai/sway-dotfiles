@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/makise.jpg fill
+set $bgpath ~/Pictures/bg/makise.jpg 
+
+output * bg $bgpath fill
 
 font pango: Averia Bold Italic 14
 

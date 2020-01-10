@@ -1,0 +1,4 @@
+output DP-2 pos 0,0 res 1920x1080
+output DP-4 pos 1920,0 res 1920x1080
+output eDP-1 pos 3840,0 res 1920x1080
+

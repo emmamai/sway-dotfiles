@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/felicity.jpg fill
+set $bgpath ~/Pictures/bg/felicity.jpg 
+
+output * bg $bgpath fill
 
 font pango: Lato Light 16
 
@@ -50,6 +52,7 @@ client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicato
 bar {
     position top
     font pango: Lato Light 16
+    status_command i3blocks
     colors {
         focused_statusline $statuscolor
         statusline $statuscolor

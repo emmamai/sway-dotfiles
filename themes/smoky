@@ -1,4 +1,6 @@
-output * bg ~/Pictures/bg/smoky.jpg fill
+set $bgpath ~/Pictures/bg/smoky.jpg   
+
+output * bg $bgpath fill
 
 font pango: Lato Light 16
 
@@ -50,8 +52,9 @@ client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicato
 bar {
     position top
     font pango: Lato Light 16
+    status_command i3status
     colors {
-        focused_statusline $statuscolor
+	focused_statusline $statuscolor
         statusline $statuscolor
         background #32323200
         urgent_workspace $urgent_bgcolor $urgent_bgcolor $urgent_textcolor
