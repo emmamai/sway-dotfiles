@@ -42,8 +42,12 @@ include ~/.config/sway/outputs/current
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section
 
-input "1:1:AT_Translated_Set_2_keyboard" {
+input "9610:30:HAILUCK_CO.,LTD_USB_KEYBOARD" {
 	xkb_options caps:super
+}
+
+input "9610:30:HAILUCK_CO.,LTD_USB_KEYBOARD_Touchpad" {
+	tap enabled
 }
 
 

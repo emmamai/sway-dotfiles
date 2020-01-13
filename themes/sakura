@@ -1,0 +1,66 @@
+set $bgpath ~/Pictures/bg/blossom.jpg 
+
+output * bg $bgpath fill
+
+font pango: Lato Light 16
+
+#
+# Color definition
+#
+
+set $menu_bg #b0333333
+set $menu_fg #fff8f8f2
+set $menu_bgactive #d0c0a0a0
+set $menu_fgactive #fff8f8f2
+
+set $focused_bgcolor #f0b0c0C0
+set $focused_textcolor #f8f8f2c0
+set $focused_indicator #f83333c0
+
+set $inactive_bgcolor #48282880
+set $inactive_textcolor #f8f2f2c0
+set $inactive_indicator #f86666c0
+
+set $unfocused_bgcolor #38181840
+set $unfocused_textcolor #f8f2f2c0
+set $unfocused_indicator #f86666c0
+
+set $urgent_bgcolor #CC7070C0
+set $urgent_textcolor #f8f2f2c0
+set $urgent_indicator #f88888c0
+
+set $statuscolor #00306080
+
+#
+# Appearance:
+#
+
+default_border normal 0
+gaps outer 24
+gaps inner 12
+
+
+client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
+client.focused_inactive $inactive_bgcolor $inactive_bgcolor $inactive_textcolor $inactive_indicator $inactive_bgcolor
+client.unfocused $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor $unfocused_indicator $unfocused_bgcolor
+client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicator $urgent_bgcolor
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+    font pango: Lato Light 16
+    status_command i3blocks
+    colors {
+        focused_statusline $statuscolor
+        statusline $statuscolor
+        background #32323200
+        urgent_workspace $urgent_bgcolor $urgent_bgcolor $urgent_textcolor
+        focused_workspace $focused_bgcolor $focused_bgcolor $focused_textcolor
+        active_workspace $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor
+        inactive_workspace #00000000 #00000000 $inactive_textcolor
+    }
+}
+
